@@ -16,16 +16,6 @@ namespace AssetPacker
             InitializeComponent();
             UpdateTitle();
             UpdateMenuEnable();
-
-            menu_About.Enabled = true;
-
-            txtPrivateKey.KeyPress += new KeyPressEventHandler(
-                (object sender, KeyPressEventArgs e) => {
-                    if (System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"[^a-z^+^A-Z^]"))
-                    {
-                        e.Handled = true;
-                    }
-                });
         }
 
         public void UpdateTitle()
@@ -53,7 +43,7 @@ namespace AssetPacker
                         return command.Check();
                     }
                 }
-                return false;
+                return true;
             };
             foreach (var obj in menuStrip.Items)
             {
@@ -160,6 +150,7 @@ namespace AssetPacker
                     }
                     ClearForm();
                     project.Open(path);
+                    project.Open();
                     ProjectSettingToForm();
                     UpdateTitle();
                     RefreshAssetList();
@@ -196,7 +187,7 @@ namespace AssetPacker
             groupSpriteAtlas.Enabled = true;
             groupBMFont.Enabled = true;
 
-            bool btnEnabled = asset.Atlas.Sprites.Count > 0;
+            bool btnEnabled = asset.Atlas?.Sprites.Count > 0;
             btn_EditSprite.Enabled = btnEnabled;
             btn_EditAnimation.Enabled = btnEnabled;
             btn_ExportSpriteAtlas.Enabled = btnEnabled;

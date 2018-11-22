@@ -19,7 +19,7 @@
             if (!Check())
                 return;
 
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=";
             var stringChars = new char[64];
             var random = new System.Random();
             for (int i = 0; i < stringChars.Length; i++)

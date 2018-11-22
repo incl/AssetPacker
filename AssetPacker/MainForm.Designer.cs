@@ -37,9 +37,10 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.menu_SaveProject = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_SaveProjectAs = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStripAsset = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_OpenAnimation = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_OpenBMFont = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.menu_Quit = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_About = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTop = new System.Windows.Forms.Panel();
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
             this.tool_NewProject = new System.Windows.Forms.ToolStripButton();
@@ -81,10 +82,6 @@
             this.toolStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.toolProgressLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.menu_Quit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStripHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_About = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.toolStripMenu.SuspendLayout();
@@ -104,7 +101,6 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuStripFile,
-            this.menuStripAsset,
             this.menuStripHelp});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -168,28 +164,32 @@
             this.menu_SaveProjectAs.Text = "Save project as...";
             this.menu_SaveProjectAs.Click += new System.EventHandler(this.CommandHandler);
             // 
-            // menuStripAsset
+            // toolStripSeparator1
             // 
-            this.menuStripAsset.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_OpenAnimation,
-            this.menu_OpenBMFont});
-            this.menuStripAsset.Name = "menuStripAsset";
-            this.menuStripAsset.Size = new System.Drawing.Size(47, 20);
-            this.menuStripAsset.Text = "Asset";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
             // 
-            // menu_OpenAnimation
+            // menu_Quit
             // 
-            this.menu_OpenAnimation.Name = "menu_OpenAnimation";
-            this.menu_OpenAnimation.Size = new System.Drawing.Size(152, 22);
-            this.menu_OpenAnimation.Text = "Animation";
-            this.menu_OpenAnimation.Click += new System.EventHandler(this.CommandHandler);
+            this.menu_Quit.Name = "menu_Quit";
+            this.menu_Quit.ShortcutKeyDisplayString = "Alt + F4";
+            this.menu_Quit.Size = new System.Drawing.Size(168, 22);
+            this.menu_Quit.Text = "Quit";
             // 
-            // menu_OpenBMFont
+            // menuStripHelp
             // 
-            this.menu_OpenBMFont.Name = "menu_OpenBMFont";
-            this.menu_OpenBMFont.Size = new System.Drawing.Size(152, 22);
-            this.menu_OpenBMFont.Text = "BMFont";
-            this.menu_OpenBMFont.Click += new System.EventHandler(this.CommandHandler);
+            this.menuStripHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_About});
+            this.menuStripHelp.Name = "menuStripHelp";
+            this.menuStripHelp.Size = new System.Drawing.Size(44, 20);
+            this.menuStripHelp.Text = "Help";
+            // 
+            // menu_About
+            // 
+            this.menu_About.Name = "menu_About";
+            this.menu_About.Size = new System.Drawing.Size(152, 22);
+            this.menu_About.Text = "About";
+            this.menu_About.Click += new System.EventHandler(this.About_Click);
             // 
             // panelTop
             // 
@@ -620,33 +620,6 @@
             this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseMove);
             this.pictureBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PictureBox_MouseUp);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
-            // 
-            // menu_Quit
-            // 
-            this.menu_Quit.Name = "menu_Quit";
-            this.menu_Quit.ShortcutKeyDisplayString = "Alt + F4";
-            this.menu_Quit.Size = new System.Drawing.Size(168, 22);
-            this.menu_Quit.Text = "Quit";
-            // 
-            // menuStripHelp
-            // 
-            this.menuStripHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_About});
-            this.menuStripHelp.Name = "menuStripHelp";
-            this.menuStripHelp.Size = new System.Drawing.Size(44, 20);
-            this.menuStripHelp.Text = "Help";
-            // 
-            // menu_About
-            // 
-            this.menu_About.Name = "menu_About";
-            this.menu_About.Size = new System.Drawing.Size(152, 22);
-            this.menu_About.Text = "About";
-            this.menu_About.Click += new System.EventHandler(this.About_Click);
-            // 
             // MainForm
             // 
             this.AllowDrop = true;
@@ -707,9 +680,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem menu_SaveProject;
         private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripMenuItem menuStripAsset;
-        private System.Windows.Forms.ToolStripMenuItem menu_OpenAnimation;
-        private System.Windows.Forms.ToolStripMenuItem menu_OpenBMFont;
         private System.Windows.Forms.Button btn_EditSprite;
         public System.Windows.Forms.NumericUpDown numSpritePadding;
         private System.Windows.Forms.Button btn_ExportSpriteAtlas;
