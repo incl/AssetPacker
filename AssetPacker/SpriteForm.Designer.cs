@@ -58,7 +58,7 @@
             this.listView.Dock = System.Windows.Forms.DockStyle.Left;
             this.listView.Location = new System.Drawing.Point(0, 0);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(197, 462);
+            this.listView.Size = new System.Drawing.Size(250, 462);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.SmallIcon;
@@ -70,9 +70,9 @@
             this.panelSprite.Controls.Add(this.panelOffset);
             this.panelSprite.Controls.Add(this.pictureBox);
             this.panelSprite.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSprite.Location = new System.Drawing.Point(197, 0);
+            this.panelSprite.Location = new System.Drawing.Point(250, 0);
             this.panelSprite.Name = "panelSprite";
-            this.panelSprite.Size = new System.Drawing.Size(487, 462);
+            this.panelSprite.Size = new System.Drawing.Size(434, 462);
             this.panelSprite.TabIndex = 1;
             // 
             // panelOffset
@@ -155,7 +155,7 @@
             // pictureBox
             // 
             this.pictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox.Location = new System.Drawing.Point(189, 166);
+            this.pictureBox.Location = new System.Drawing.Point(168, 168);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(100, 100);
             this.pictureBox.TabIndex = 0;
@@ -169,9 +169,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripZoomLabel,
             this.toolStripZoom});
-            this.statusStrip1.Location = new System.Drawing.Point(197, 440);
+            this.statusStrip1.Location = new System.Drawing.Point(250, 440);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(487, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(434, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -200,28 +200,28 @@
             // toolStripZoom_8
             // 
             this.toolStripZoom_8.Name = "toolStripZoom_8";
-            this.toolStripZoom_8.Size = new System.Drawing.Size(152, 22);
+            this.toolStripZoom_8.Size = new System.Drawing.Size(105, 22);
             this.toolStripZoom_8.Text = "800%";
             this.toolStripZoom_8.Click += new System.EventHandler(this.ZoomTool_Click);
             // 
             // toolStripZoom_4
             // 
             this.toolStripZoom_4.Name = "toolStripZoom_4";
-            this.toolStripZoom_4.Size = new System.Drawing.Size(152, 22);
+            this.toolStripZoom_4.Size = new System.Drawing.Size(105, 22);
             this.toolStripZoom_4.Text = "400%";
             this.toolStripZoom_4.Click += new System.EventHandler(this.ZoomTool_Click);
             // 
             // toolStripZoom_2
             // 
             this.toolStripZoom_2.Name = "toolStripZoom_2";
-            this.toolStripZoom_2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripZoom_2.Size = new System.Drawing.Size(105, 22);
             this.toolStripZoom_2.Text = "200%";
             this.toolStripZoom_2.Click += new System.EventHandler(this.ZoomTool_Click);
             // 
             // toolStripZoom_1
             // 
             this.toolStripZoom_1.Name = "toolStripZoom_1";
-            this.toolStripZoom_1.Size = new System.Drawing.Size(152, 22);
+            this.toolStripZoom_1.Size = new System.Drawing.Size(105, 22);
             this.toolStripZoom_1.Text = "100%";
             this.toolStripZoom_1.Click += new System.EventHandler(this.ZoomTool_Click);
             // 

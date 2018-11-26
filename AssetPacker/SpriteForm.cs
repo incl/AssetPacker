@@ -12,6 +12,7 @@ namespace AssetPacker
         public float ZoomFactor { get; set; }
 
         private int anchorSize = 4;
+        private List<Model.Sprite> copySprites;
 
         public SpriteForm()
         {
@@ -26,7 +27,11 @@ namespace AssetPacker
                 return;
 
             listView.Items.Clear();
-            foreach (Model.Sprite sprite in Atlas.Sprites)
+            copySprites = new List<Model.Sprite>(Atlas.Sprites);
+            copySprites.Sort((a, b) => {
+                return string.Compare(a.ImageName, b.ImageName);
+            });
+            foreach (Model.Sprite sprite in copySprites)
             {
                 listView.Items.Add(sprite.ImageName);
             }
@@ -64,9 +69,9 @@ namespace AssetPacker
 
             SelectedSprite = null;
             int index = listView.SelectedIndices[0];
-            numOffsetX.Value = Atlas.Sprites[index].Offset.X;
-            numOffsetY.Value = Atlas.Sprites[index].Offset.Y;
-            SelectedSprite = Atlas.Sprites[index];
+            numOffsetX.Value = copySprites[index].Offset.X;
+            numOffsetY.Value = copySprites[index].Offset.Y;
+            SelectedSprite = copySprites[index];
             pictureBox.Location = new Point(0, 0);
 
             PaintSprite();
@@ -116,8 +121,8 @@ namespace AssetPacker
             {
                 foreach (int index in listView.SelectedIndices)
                 {
-                    Atlas.Sprites[index].Offset.X = Decimal.ToInt16(numOffsetX.Value);
-                    Atlas.Sprites[index].Offset.Y = Decimal.ToInt16(numOffsetY.Value);
+                    copySprites[index].Offset.X = Decimal.ToInt16(numOffsetX.Value);
+                    copySprites[index].Offset.Y = Decimal.ToInt16(numOffsetY.Value);
                 }
 
                 PaintSprite();
