@@ -174,7 +174,7 @@ namespace AssetPacker.Model
             }
 
             string json = System.IO.File.ReadAllText(openPath);
-            Project project = Newtonsoft.Json.JsonConvert.DeserializeObject<Project>(json);
+            Project project = JsonConvert.DeserializeObject<Project>(json);
 
             Clear();
             Copy(project);
