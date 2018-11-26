@@ -57,6 +57,7 @@
             this.lst_Dirs.ItemHeight = 12;
             this.lst_Dirs.Location = new System.Drawing.Point(12, 36);
             this.lst_Dirs.Name = "lst_Dirs";
+            this.lst_Dirs.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lst_Dirs.Size = new System.Drawing.Size(330, 232);
             this.lst_Dirs.TabIndex = 0;
             this.lst_Dirs.TabStop = false;
@@ -68,6 +69,7 @@
             this.lst_Animations.ItemHeight = 12;
             this.lst_Animations.Location = new System.Drawing.Point(442, 36);
             this.lst_Animations.Name = "lst_Animations";
+            this.lst_Animations.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lst_Animations.Size = new System.Drawing.Size(330, 232);
             this.lst_Animations.TabIndex = 0;
             this.lst_Animations.TabStop = false;
