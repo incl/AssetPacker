@@ -36,7 +36,7 @@ namespace AssetPacker.Model
                 if (Offsets.ContainsKey(sprite.ImageName))
                 {
                     Offset offset = Offsets[sprite.ImageName];
-                    sprite.Offset.X = offset.Y;
+                    sprite.Offset.X = offset.X;
                     sprite.Offset.Y = offset.Y;
                 }
             }
